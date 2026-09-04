@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTheme } from './hooks/useTheme';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ServicesSection } from './components/ServicesSection';
@@ -14,6 +15,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
   const [prefilledMessage, setPrefilledMessage] = useState<string>('');
 
   const scrollToSection = (id: string) => {
@@ -54,8 +56,12 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary">
-      {/* Navigation */}
-      <Navbar onOpenCalculator={handleOpenCalculator} />
+      {/* Navigation with Theme Toggle */}
+      <Navbar 
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        onOpenCalculator={handleOpenCalculator} 
+      />
 
       <main>
         {/* Hero Section */}

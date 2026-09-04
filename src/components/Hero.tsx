@@ -36,7 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator }) => {
             margin: '0 auto 2.5rem',
             lineHeight: 1.65
           }}>
-            Anyone can prompt an AI to generate code. We build the <strong style={{ color: '#fff' }}>hardcore engineering architecture</strong> that makes it secure, scalable, and cross-platform—delivering high-performance software at 5x speed.
+            Anyone can prompt an AI to generate code. We build the <strong style={{ color: 'var(--text-main)' }}>hardcore engineering architecture</strong> that makes it secure, scalable, and cross-platform—delivering high-performance software at 5x speed.
           </p>
 
           {/* CTA Buttons */}
@@ -72,36 +72,37 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator }) => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
             gap: '1.25rem',
             padding: '1.25rem',
-            background: 'rgba(13, 19, 35, 0.45)',
+            background: 'var(--card-bg)',
             borderRadius: '1rem',
-            border: '1px solid rgba(255, 255, 255, 0.07)',
+            border: '1px solid var(--card-border)',
+            boxShadow: 'var(--card-shadow)',
             backdropFilter: 'blur(12px)'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'center' }}>
               <Terminal size={20} color="var(--accent-cyan)" />
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: '#fff' }}>Native Systems</div>
+                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-main)' }}>Native Systems</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Electron, C#, WebGL</div>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'center' }}>
               <Layers size={20} color="var(--accent-blue)" />
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: '#fff' }}>Multi-Platform</div>
+                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-main)' }}>Multi-Platform</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Desktop, Web & Mobile</div>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'center' }}>
               <ShieldCheck size={20} color="var(--accent-emerald)" />
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: '#fff' }}>Hardened Security</div>
+                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-main)' }}>Hardened Security</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Bank-Grade Encryption</div>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'center' }}>
               <Cpu size={20} color="var(--accent-magenta)" />
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: '#fff' }}>AI-Accelerated</div>
+                <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-main)' }}>AI-Accelerated</div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>5x Delivery Velocity</div>
               </div>
             </div>
@@ -147,16 +148,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator }) => {
               flexWrap: 'wrap',
               justifyContent: 'space-between',
               alignItems: 'center',
-              background: 'rgba(6, 8, 15, 0.85)',
+              background: 'var(--nav-bg)',
               backdropFilter: 'blur(16px)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
+              border: '1px solid var(--nav-border)',
               borderRadius: '0.85rem',
               padding: '0.85rem 1.25rem',
               gap: '1rem'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                 <span className="pulsing-dot" style={{ color: 'var(--accent-emerald)' }}></span>
-                <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#fff', fontFamily: 'var(--font-mono)' }}>
+                <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-main)', fontFamily: 'var(--font-mono)' }}>
                   PLATFORM CORE: OPERATIONAL
                 </span>
               </div>

@@ -8,11 +8,12 @@ export const Footer: React.FC = () => {
 
   return (
     <footer style={{
-      borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-      background: 'rgba(4, 6, 12, 0.95)',
+      borderTop: '1px solid var(--card-border)',
+      background: 'var(--bg-secondary)',
       paddingTop: '4.5rem',
       paddingBottom: '2.5rem',
-      position: 'relative'
+      position: 'relative',
+      transition: 'all 0.3s ease'
     }}>
       <div className="container">
         <div style={{
@@ -35,7 +36,7 @@ export const Footer: React.FC = () => {
               }}>
                 <Code2 size={20} color="#040813" strokeWidth={2.5} />
               </div>
-              <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.2rem', color: '#fff' }}>
+              <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.2rem', color: 'var(--text-main)' }}>
                 KOZMAK <span style={{ color: 'var(--accent-cyan)' }}>TECH</span>
               </span>
             </div>
@@ -44,7 +45,7 @@ export const Footer: React.FC = () => {
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem' }}>
               <Mail size={15} color="var(--accent-cyan)" />
-              <a href="mailto:info@kozmaktechnologies.com" style={{ color: '#fff', textDecoration: 'underline' }}>
+              <a href="mailto:info@kozmaktechnologies.com" style={{ color: 'var(--text-main)', textDecoration: 'underline' }}>
                 info@kozmaktechnologies.com
               </a>
             </div>
@@ -56,11 +57,11 @@ export const Footer: React.FC = () => {
               Engineering Pillars
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
-              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Desktop Native & Electron</a></li>
-              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Web Platforms & Cloud SaaS</a></li>
-              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>iOS & Android Mobile Apps</a></li>
-              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>3D Game Engines & WebGL</a></li>
-              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Computer Vision & AI Workflows</a></li>
+              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Desktop Native & Electron</a></li>
+              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Web Platforms & Cloud SaaS</a></li>
+              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>iOS & Android Mobile Apps</a></li>
+              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>3D Game Engines & WebGL</a></li>
+              <li><a href="#services" style={{ transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent-cyan)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Computer Vision & AI Workflows</a></li>
             </ul>
           </div>
 
@@ -95,11 +96,11 @@ export const Footer: React.FC = () => {
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>zinter.com.ng</div>
               </li>
               <li>
-                <span style={{ color: '#fff' }}>KozEngine (Nexus 3D)</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: 600 }}>KozEngine (Nexus 3D)</span>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Proprietary 3D Game Engine</div>
               </li>
               <li>
-                <span style={{ color: '#fff' }}>NexaFi Neobank</span>
+                <span style={{ color: 'var(--text-main)', fontWeight: 600 }}>NexaFi Neobank</span>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>AI-Powered Emerging Markets DeFi</div>
               </li>
             </ul>
@@ -121,7 +122,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Strip */}
         <div style={{
-          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+          borderTop: '1px solid var(--card-border)',
           paddingTop: '1.5rem',
           display: 'flex',
           flexWrap: 'wrap',
@@ -139,17 +140,11 @@ export const Footer: React.FC = () => {
             <span>Terms of Service</span>
             <button 
               onClick={scrollToTop}
+              className="btn-secondary"
               style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                color: '#fff',
-                padding: '0.4rem 0.8rem',
-                borderRadius: '6px',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.4rem',
-                fontSize: '0.78rem'
+                padding: '0.35rem 0.75rem',
+                fontSize: '0.78rem',
+                gap: '0.35rem'
               }}
             >
               <span>Back to Top</span>
