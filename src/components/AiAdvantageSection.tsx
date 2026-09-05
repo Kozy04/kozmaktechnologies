@@ -33,8 +33,8 @@ export const AiAdvantageSection: React.FC<AiAdvantageSectionProps> = ({ onAuditR
         }}>
           {/* Card 1: The Raw AI / Vibe Coding Trap */}
           <div className="glass-card" style={{
-            borderColor: 'rgba(239, 68, 68, 0.25)',
-            background: 'rgba(25, 12, 18, 0.65)'
+            borderColor: 'rgba(239, 68, 68, 0.35)',
+            background: 'var(--card-bg)'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
               <div style={{
@@ -46,37 +46,37 @@ export const AiAdvantageSection: React.FC<AiAdvantageSectionProps> = ({ onAuditR
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <ShieldAlert size={20} color="#f87171" />
+                <ShieldAlert size={20} color="#ef4444" />
               </div>
               <div>
-                <h3 style={{ fontSize: '1.2rem', color: '#f87171' }}>The "Raw AI / Vibe-Coding" Trap</h3>
+                <h3 style={{ fontSize: '1.2rem', color: '#ef4444' }}>The "Raw AI / Vibe-Coding" Trap</h3>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Surface-level prototypes without foundations</span>
               </div>
             </div>
 
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                <XCircle size={18} color="#f87171" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#cbd5e1' }}>
-                  <strong>Fragile Architecture:</strong> Brittle, copy-pasted boilerplate filled with silent memory leaks and race conditions.
+                <XCircle size={18} color="#ef4444" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>Fragile Architecture:</strong> Brittle, copy-pasted boilerplate filled with silent memory leaks and race conditions.
                 </span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                <XCircle size={18} color="#f87171" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#cbd5e1' }}>
-                  <strong>Security Vulnerabilities:</strong> Exposed API keys, missing authorization checks, and flawed SQL/data models.
+                <XCircle size={18} color="#ef4444" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>Security Vulnerabilities:</strong> Exposed API keys, missing authorization checks, and flawed SQL/data models.
                 </span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                <XCircle size={18} color="#f87171" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#cbd5e1' }}>
-                  <strong>Single-Platform Silos:</strong> Limited to web templates; unable to engineer custom 3D game engines or native desktop software.
+                <XCircle size={18} color="#ef4444" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>Single-Platform Silos:</strong> Limited to web templates; unable to engineer custom 3D game engines or native desktop software.
                 </span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                <XCircle size={18} color="#f87171" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#cbd5e1' }}>
-                  <strong>Breaks Under Traffic:</strong> Collapses as soon as the app reaches concurrency or complex transactional flows.
+                <XCircle size={18} color="#ef4444" style={{ flexShrink: 0, marginTop: '3px' }} />
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>Breaks Under Traffic:</strong> Collapses as soon as the app reaches concurrency or complex transactional flows.
                 </span>
               </li>
             </ul>
@@ -84,9 +84,8 @@ export const AiAdvantageSection: React.FC<AiAdvantageSectionProps> = ({ onAuditR
 
           {/* Card 2: The Kozmak Engineering Standard */}
           <div className="glass-card" style={{
-            borderColor: 'rgba(0, 242, 254, 0.35)',
-            background: 'rgba(8, 22, 38, 0.75)',
-            boxShadow: '0 0 35px rgba(0, 242, 254, 0.1)'
+            borderColor: 'var(--card-border-glow)',
+            background: 'var(--card-bg)'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
               <div style={{
@@ -109,26 +108,26 @@ export const AiAdvantageSection: React.FC<AiAdvantageSectionProps> = ({ onAuditR
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                 <CheckCircle2 size={18} color="var(--accent-cyan)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#f8fafc' }}>
-                  <strong>5x Accelerated Velocity:</strong> We harness state-of-the-art AI tooling to eliminate boilerplate, shipping MVPs in weeks not months.
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>5x Accelerated Velocity:</strong> We harness state-of-the-art AI tooling to eliminate boilerplate, shipping MVPs in weeks not months.
                 </span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                 <CheckCircle2 size={18} color="var(--accent-cyan)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#f8fafc' }}>
-                  <strong>Hardcore Systems Rigor:</strong> Production-grade data schemas, encrypted vaults (AES-256), and rigorous unit/load test suites.
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>Hardcore Systems Rigor:</strong> Production-grade data schemas, encrypted vaults (AES-256), and rigorous unit/load test suites.
                 </span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                 <CheckCircle2 size={18} color="var(--accent-cyan)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#f8fafc' }}>
-                  <strong>True Multi-Platform Mastery:</strong> Seamless architecture across Desktop (Electron/Native), Web, Mobile (iOS/Android), and 3D Game Engines.
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>True Multi-Platform Mastery:</strong> Seamless architecture across Desktop (Electron/Native), Web, Mobile (iOS/Android), and 3D Game Engines.
                 </span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                 <CheckCircle2 size={18} color="var(--accent-cyan)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                <span style={{ fontSize: '0.92rem', color: '#f8fafc' }}>
-                  <strong>Investor & Enterprise Ready:</strong> Clean, maintainable, fully documented intellectual property that your in-house team can scale forever.
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--text-main)' }}>Investor & Enterprise Ready:</strong> Clean, maintainable, fully documented intellectual property that your in-house team can scale forever.
                 </span>
               </li>
             </ul>
@@ -137,15 +136,16 @@ export const AiAdvantageSection: React.FC<AiAdvantageSectionProps> = ({ onAuditR
 
         {/* Lead Magnet Banner: Free AI Code Audit */}
         <div style={{
-          background: 'linear-gradient(135deg, rgba(121, 40, 202, 0.15) 0%, rgba(0, 242, 254, 0.15) 100%)',
-          border: '1px solid rgba(0, 242, 254, 0.3)',
+          background: 'var(--card-bg)',
+          border: '1px solid var(--card-border-glow)',
           borderRadius: '1.25rem',
           padding: '2.5rem',
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: '2rem'
+          gap: '2rem',
+          boxShadow: 'var(--card-shadow)'
         }}>
           <div style={{ maxWidth: '640px' }}>
             <span style={{ 
@@ -158,11 +158,11 @@ export const AiAdvantageSection: React.FC<AiAdvantageSectionProps> = ({ onAuditR
             }}>
               ⭐ Inbound Founder Diagnostic
             </span>
-            <h3 style={{ fontSize: '1.6rem', marginTop: '0.5rem', marginBottom: '0.6rem' }}>
+            <h3 style={{ fontSize: '1.6rem', marginTop: '0.5rem', marginBottom: '0.6rem', color: 'var(--text-main)' }}>
               Built a Prototype with AI That is Hitting a Wall?
             </h3>
-            <p style={{ fontSize: '1rem', color: '#cbd5e1' }}>
-              Request our <strong>Free 12-Point AI Prototype & Production Readiness Audit</strong>. We inspect your code, detect security liabilities, review multi-platform viability, and provide a concrete production roadmap.
+            <p style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>
+              Request our <strong style={{ color: 'var(--text-main)' }}>Free 12-Point AI Prototype & Production Readiness Audit</strong>. We inspect your code, detect security liabilities, review multi-platform viability, and provide a concrete production roadmap.
             </p>
           </div>
           <button 

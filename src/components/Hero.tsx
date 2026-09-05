@@ -123,8 +123,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCalculator }) => {
             position: 'relative',
             borderRadius: '1.25rem',
             overflow: 'hidden',
-            backgroundColor: '#07090e',
-            border: '1px solid rgba(255, 255, 255, 0.12)'
+            backgroundColor: 'var(--bg-tertiary)',
+            border: '1px solid var(--card-border)'
           }}>
             <img 
               src="/images/kozmak_hero.jpg" 

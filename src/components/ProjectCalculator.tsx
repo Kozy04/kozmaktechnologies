@@ -150,9 +150,9 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onApplySpe
                         fontFamily: 'var(--font-heading)',
                         fontWeight: 600,
                         textAlign: 'left',
-                        background: platform === p.id ? 'rgba(0, 242, 254, 0.15)' : 'rgba(255, 255, 255, 0.03)',
-                        border: platform === p.id ? '1px solid var(--accent-cyan)' : '1px solid rgba(255, 255, 255, 0.08)',
-                        color: platform === p.id ? '#fff' : 'var(--text-secondary)',
+                        background: platform === p.id ? 'rgba(0, 242, 254, 0.15)' : 'var(--bg-tertiary)',
+                        border: platform === p.id ? '1px solid var(--accent-cyan)' : '1px solid var(--card-border)',
+                        color: platform === p.id ? 'var(--accent-cyan)' : 'var(--text-secondary)',
                         cursor: 'pointer',
                         transition: 'all 0.2s ease'
                       }}
@@ -180,13 +180,13 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onApplySpe
                       style={{
                         padding: '0.85rem 1rem',
                         borderRadius: '0.65rem',
-                        background: stage === s.id ? 'rgba(121, 40, 202, 0.15)' : 'rgba(255, 255, 255, 0.03)',
-                        border: stage === s.id ? '1px solid var(--accent-purple)' : '1px solid rgba(255, 255, 255, 0.08)',
+                        background: stage === s.id ? 'rgba(121, 40, 202, 0.15)' : 'var(--bg-tertiary)',
+                        border: stage === s.id ? '1px solid var(--accent-purple)' : '1px solid var(--card-border)',
                         cursor: 'pointer',
                         transition: 'all 0.2s ease'
                       }}
                     >
-                      <div style={{ fontSize: '0.92rem', fontWeight: 600, color: stage === s.id ? '#fff' : '#cbd5e1' }}>
+                      <div style={{ fontSize: '0.92rem', fontWeight: 600, color: stage === s.id ? 'var(--accent-purple)' : 'var(--text-main)' }}>
                         {s.title}
                       </div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '2px' }}>
@@ -219,11 +219,11 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onApplySpe
                         style={{
                           padding: '0.6rem 0.8rem',
                           borderRadius: '0.5rem',
-                          background: isSelected ? 'rgba(0, 223, 137, 0.12)' : 'rgba(255, 255, 255, 0.03)',
-                          border: isSelected ? '1px solid var(--accent-emerald)' : '1px solid rgba(255, 255, 255, 0.08)',
+                          background: isSelected ? 'rgba(0, 223, 137, 0.12)' : 'var(--bg-tertiary)',
+                          border: isSelected ? '1px solid var(--accent-emerald)' : '1px solid var(--card-border)',
                           fontSize: '0.82rem',
                           fontWeight: 500,
-                          color: isSelected ? '#fff' : 'var(--text-secondary)',
+                          color: isSelected ? 'var(--accent-emerald)' : 'var(--text-secondary)',
                           cursor: 'pointer',
                           display: 'flex',
                           alignItems: 'center',
@@ -251,14 +251,14 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onApplySpe
 
             {/* Right Column: Live Calculated Estimate Card */}
             <div style={{
-              background: 'rgba(8, 14, 28, 0.85)',
+              background: 'var(--card-bg)',
               borderRadius: '1.25rem',
-              border: '1px solid rgba(0, 242, 254, 0.25)',
+              border: '1px solid var(--card-border-glow)',
               padding: '2rem',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
-              boxShadow: '0 15px 40px rgba(0, 0, 0, 0.4)'
+              boxShadow: 'var(--card-shadow)'
             }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
@@ -283,7 +283,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onApplySpe
                     Estimated Time to Production
                   </div>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
-                    <span style={{ fontSize: '2.4rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: '#fff' }}>
+                    <span style={{ fontSize: '2.4rem', fontWeight: 800, fontFamily: 'var(--font-mono)', color: 'var(--text-main)' }}>
                       {estimate.weeks}
                     </span>
                     <span style={{ fontSize: '1.2rem', color: 'var(--accent-cyan)', fontWeight: 600 }}>Weeks</span>
@@ -313,11 +313,11 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onApplySpe
                 </div>
 
                 {/* Architectural Inclusions */}
-                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '1.25rem', marginBottom: '1.5rem' }}>
+                <div style={{ borderTop: '1px solid var(--card-border)', paddingTop: '1.25rem', marginBottom: '1.5rem' }}>
                   <div style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
                     Included in Architecture
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem', color: '#cbd5e1' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <Check size={14} color="var(--accent-cyan)" />
                       <span>Dedicated Senior Systems Architect & Lead Engineer</span>

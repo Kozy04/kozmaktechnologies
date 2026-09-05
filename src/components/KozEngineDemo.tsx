@@ -249,7 +249,7 @@ export const KozEngineDemo: React.FC = () => {
             alignItems: 'center',
             paddingBottom: '1rem',
             marginBottom: '1rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            borderBottom: '1px solid var(--card-border)',
             gap: '1rem'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
@@ -260,7 +260,7 @@ export const KozEngineDemo: React.FC = () => {
                 background: 'var(--accent-emerald)',
                 boxShadow: '0 0 10px var(--accent-emerald)'
               }}></div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.88rem', fontWeight: 600, color: '#fff' }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.88rem', fontWeight: 600, color: 'var(--text-main)' }}>
                 KozEngine v1.0.4 [WebGL / Spatial Mesh Matrix]
               </span>
               <span style={{
@@ -280,9 +280,9 @@ export const KozEngineDemo: React.FC = () => {
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
                 style={{
-                  background: isPlaying ? 'rgba(0, 242, 254, 0.15)' : 'rgba(255, 255, 255, 0.08)',
-                  color: isPlaying ? 'var(--accent-cyan)' : '#fff',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: isPlaying ? 'rgba(0, 242, 254, 0.15)' : 'var(--bg-tertiary)',
+                  color: isPlaying ? 'var(--accent-cyan)' : 'var(--text-main)',
+                  border: '1px solid var(--card-border)',
                   padding: '0.4rem 0.8rem',
                   borderRadius: '6px',
                   cursor: 'pointer',
@@ -300,9 +300,9 @@ export const KozEngineDemo: React.FC = () => {
               <button
                 onClick={() => setWireframeOnly(!wireframeOnly)}
                 style={{
-                  background: wireframeOnly ? 'rgba(121, 40, 202, 0.25)' : 'rgba(255, 255, 255, 0.08)',
-                  color: wireframeOnly ? '#c084fc' : '#fff',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: wireframeOnly ? 'rgba(121, 40, 202, 0.25)' : 'var(--bg-tertiary)',
+                  color: wireframeOnly ? 'var(--accent-purple)' : 'var(--text-main)',
+                  border: '1px solid var(--card-border)',
                   padding: '0.4rem 0.8rem',
                   borderRadius: '6px',
                   cursor: 'pointer',
@@ -320,9 +320,9 @@ export const KozEngineDemo: React.FC = () => {
               <button
                 onClick={() => setParticlesEnabled(!particlesEnabled)}
                 style={{
-                  background: particlesEnabled ? 'rgba(0, 223, 137, 0.15)' : 'rgba(255, 255, 255, 0.08)',
-                  color: particlesEnabled ? 'var(--accent-emerald)' : '#fff',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: particlesEnabled ? 'rgba(0, 223, 137, 0.15)' : 'var(--bg-tertiary)',
+                  color: particlesEnabled ? 'var(--accent-emerald)' : 'var(--text-main)',
+                  border: '1px solid var(--card-border)',
                   padding: '0.4rem 0.8rem',
                   borderRadius: '6px',
                   cursor: 'pointer',
@@ -340,9 +340,9 @@ export const KozEngineDemo: React.FC = () => {
               <button
                 onClick={() => setSpeedMultiplier(prev => prev === 1 ? 2 : (prev === 2 ? 0.5 : 1))}
                 style={{
-                  background: 'rgba(255, 255, 255, 0.08)',
-                  color: '#fff',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: 'var(--bg-tertiary)',
+                  color: 'var(--text-main)',
+                  border: '1px solid var(--card-border)',
                   padding: '0.4rem 0.8rem',
                   borderRadius: '6px',
                   cursor: 'pointer',
@@ -444,20 +444,20 @@ export const KozEngineDemo: React.FC = () => {
             gap: '1rem',
             marginTop: '1.25rem',
             paddingTop: '1rem',
-            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+            borderTop: '1px solid var(--card-border)',
             fontSize: '0.85rem',
             color: 'var(--text-secondary)'
           }}>
             <div>
-              <strong style={{ color: '#fff', display: 'block' }}>Zero-Dependency Core</strong>
+              <strong style={{ color: 'var(--text-main)', display: 'block' }}>Zero-Dependency Core</strong>
               <span>Custom rendering pipeline without bloated overhead.</span>
             </div>
             <div>
-              <strong style={{ color: '#fff', display: 'block' }}>Unified Cross-Platform</strong>
+              <strong style={{ color: 'var(--text-main)', display: 'block' }}>Unified Cross-Platform</strong>
               <span>Compiles directly to WebGL, Mobile, and Native PC targets.</span>
             </div>
             <div>
-              <strong style={{ color: '#fff', display: 'block' }}>Real-Time Physics & Shaders</strong>
+              <strong style={{ color: 'var(--text-main)', display: 'block' }}>Real-Time Physics & Shaders</strong>
               <span>Deterministic physics solver and programmable materials.</span>
             </div>
           </div>

@@ -109,11 +109,11 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                   style={{
                     background: selectedCategory === cat 
                       ? 'rgba(0, 242, 254, 0.2)' 
-                      : 'rgba(255, 255, 255, 0.04)',
+                      : 'var(--card-bg)',
                     color: selectedCategory === cat ? 'var(--accent-cyan)' : 'var(--text-secondary)',
                     border: selectedCategory === cat 
                       ? '1px solid var(--accent-cyan)' 
-                      : '1px solid rgba(255, 255, 255, 0.08)',
+                      : '1px solid var(--card-border)',
                     padding: '0.45rem 0.9rem',
                     borderRadius: '9999px',
                     fontSize: '0.82rem',
@@ -169,7 +169,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                 width: '100%',
                 height: '210px',
                 overflow: 'hidden',
-                backgroundColor: '#0a0e1a'
+                backgroundColor: 'var(--bg-tertiary)'
               }}>
                 <img 
                   src={post.coverImage} 
@@ -221,7 +221,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                     <span>{post.date}</span>
                   </div>
 
-                  <h3 style={{ fontSize: '1.28rem', color: '#fff', marginBottom: '0.75rem', lineHeight: 1.35 }}>
+                  <h3 style={{ fontSize: '1.28rem', color: 'var(--text-main)', marginBottom: '0.75rem', lineHeight: 1.35 }}>
                     {post.title}
                   </h3>
 
@@ -237,8 +237,9 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                       <span key={idx} style={{
                         fontSize: '0.72rem',
                         fontFamily: 'var(--font-mono)',
-                        background: 'rgba(255, 255, 255, 0.04)',
-                        color: '#94a3b8',
+                        background: 'var(--bg-tertiary)',
+                        border: '1px solid var(--card-border)',
+                        color: 'var(--text-secondary)',
                         padding: '0.2rem 0.5rem',
                         borderRadius: '4px'
                       }}>
@@ -274,7 +275,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(4, 6, 12, 0.88)',
+            backgroundColor: 'var(--modal-overlay)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
             zIndex: 2200,
@@ -309,9 +310,9 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                   <button
                     onClick={handleCopyShare}
                     style={{
-                      background: 'rgba(255, 255, 255, 0.06)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: copiedLink ? 'var(--accent-emerald)' : '#fff',
+                      background: 'var(--bg-tertiary)',
+                      border: '1px solid var(--card-border)',
+                      color: copiedLink ? 'var(--accent-emerald)' : 'var(--text-main)',
                       padding: '0.4rem 0.8rem',
                       borderRadius: '6px',
                       fontSize: '0.8rem',
@@ -328,9 +329,9 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                   <button
                     onClick={() => setActiveArticle(null)}
                     style={{
-                      background: 'rgba(255, 255, 255, 0.08)',
-                      border: '1px solid rgba(255, 255, 255, 0.15)',
-                      color: '#fff',
+                      background: 'var(--bg-tertiary)',
+                      border: '1px solid var(--card-border)',
+                      color: 'var(--text-main)',
                       width: '36px',
                       height: '36px',
                       borderRadius: '50%',
@@ -346,7 +347,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
               </div>
 
               {/* Title & Metadata */}
-              <h1 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: '#fff', marginBottom: '1rem', lineHeight: 1.25 }}>
+              <h1 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', color: 'var(--text-main)', marginBottom: '1rem', lineHeight: 1.25 }}>
                 {activeArticle.title}
               </h1>
 
@@ -359,9 +360,9 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                 color: 'var(--text-muted)',
                 paddingBottom: '1.5rem',
                 marginBottom: '2rem',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+                borderBottom: '1px solid var(--card-border)'
               }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#cbd5e1' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-secondary)' }}>
                   <User size={15} color="var(--accent-cyan)" />
                   {activeArticle.author}
                 </span>
@@ -380,7 +381,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                 overflow: 'hidden',
                 maxHeight: '340px',
                 marginBottom: '2rem',
-                border: '1px solid rgba(255, 255, 255, 0.1)'
+                border: '1px solid var(--card-border)'
               }}>
                 <img 
                   src={activeArticle.coverImage} 
@@ -391,7 +392,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
 
               {/* Article Content Formatted */}
               <div style={{
-                color: '#e2e8f0',
+                color: 'var(--text-secondary)',
                 fontSize: '1.05rem',
                 lineHeight: 1.8,
                 whiteSpace: 'pre-wrap',
@@ -413,7 +414,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onContactAuthor }) => 
                 gap: '1.5rem'
               }}>
                 <div>
-                  <h4 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '0.4rem' }}>
+                  <h4 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.4rem' }}>
                     Need Production Architecture for This?
                   </h4>
                   <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>

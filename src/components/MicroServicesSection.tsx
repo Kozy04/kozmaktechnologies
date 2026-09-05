@@ -65,7 +65,7 @@ export const MicroServicesSection: React.FC<MicroServicesSectionProps> = ({ onSe
                 </div>
 
                 {/* Title */}
-                <h3 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.75rem' }}>
+                <h3 style={{ fontSize: '1.3rem', color: 'var(--text-main)', marginBottom: '0.75rem' }}>
                   {service.title}
                 </h3>
 
@@ -78,8 +78,8 @@ export const MicroServicesSection: React.FC<MicroServicesSectionProps> = ({ onSe
                   display: 'grid',
                   gridTemplateColumns: 'repeat(2, 1fr)',
                   gap: '0.75rem',
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--card-border)',
                   borderRadius: '0.65rem',
                   padding: '0.75rem 1rem',
                   marginBottom: '1.25rem'
@@ -89,7 +89,7 @@ export const MicroServicesSection: React.FC<MicroServicesSectionProps> = ({ onSe
                       <Clock size={12} color="var(--accent-cyan)" />
                       <span>TURNAROUND</span>
                     </div>
-                    <div style={{ fontSize: '0.92rem', fontWeight: 700, color: '#fff', fontFamily: 'var(--font-mono)', marginTop: '2px' }}>
+                    <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--text-main)', fontFamily: 'var(--font-mono)', marginTop: '2px' }}>
                       {service.turnaround}
                     </div>
                   </div>
@@ -112,7 +112,7 @@ export const MicroServicesSection: React.FC<MicroServicesSectionProps> = ({ onSe
                   </div>
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                     {service.deliverables.map((item, idx) => (
-                      <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.84rem', color: '#e2e8f0' }}>
+                      <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.84rem', color: 'var(--text-secondary)' }}>
                         <div style={{
                           width: '14px',
                           height: '14px',
@@ -135,7 +135,7 @@ export const MicroServicesSection: React.FC<MicroServicesSectionProps> = ({ onSe
               {/* Action Button */}
               <div style={{
                 paddingTop: '1rem',
-                borderTop: '1px solid rgba(255, 255, 255, 0.08)'
+                borderTop: '1px solid var(--card-border)'
               }}>
                 <button
                   type="button"

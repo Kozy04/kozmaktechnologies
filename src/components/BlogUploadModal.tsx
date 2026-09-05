@@ -109,7 +109,7 @@ export const BlogUploadModal: React.FC<BlogUploadModalProps> = ({ isOpen, onClos
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: 'rgba(4, 6, 12, 0.88)',
+      backgroundColor: 'var(--modal-overlay)',
       backdropFilter: 'blur(16px)',
       WebkitBackdropFilter: 'blur(16px)',
       zIndex: 2100,
@@ -141,9 +141,9 @@ export const BlogUploadModal: React.FC<BlogUploadModalProps> = ({ isOpen, onClos
             position: 'absolute',
             top: '1.25rem',
             right: '1.25rem',
-            background: 'rgba(255, 255, 255, 0.08)',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
-            color: '#fff',
+            background: 'var(--bg-tertiary)',
+            border: '1px solid var(--card-border)',
+            color: 'var(--text-main)',
             width: '36px',
             height: '36px',
             borderRadius: '50%',
@@ -171,7 +171,7 @@ export const BlogUploadModal: React.FC<BlogUploadModalProps> = ({ isOpen, onClos
             <FileText size={18} color="var(--accent-cyan)" />
           </div>
           <div>
-            <h3 style={{ fontSize: '1.45rem', color: '#fff', margin: 0 }}>
+            <h3 style={{ fontSize: '1.45rem', color: 'var(--text-main)', margin: 0 }}>
               Publish New Technical Article
             </h3>
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
@@ -205,7 +205,7 @@ export const BlogUploadModal: React.FC<BlogUploadModalProps> = ({ isOpen, onClos
             }}
           />
           <UploadCloud size={32} color="var(--accent-cyan)" style={{ margin: '0 auto 0.5rem' }} />
-          <div style={{ fontSize: '0.92rem', fontWeight: 600, color: '#fff' }}>
+          <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-main)' }}>
             {fileName ? `Uploaded File: ${fileName}` : 'Drop a Markdown (.md) or Text file here to auto-fill'}
           </div>
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
@@ -278,22 +278,22 @@ export const BlogUploadModal: React.FC<BlogUploadModalProps> = ({ isOpen, onClos
         {/* Form Body or Preview */}
         {previewMode ? (
           <div style={{
-            background: 'rgba(6, 8, 15, 0.8)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            background: 'var(--bg-secondary)',
+            border: '1px solid var(--card-border)',
             borderRadius: '0.75rem',
             padding: '1.5rem',
             minHeight: '340px',
-            color: '#e2e8f0',
+            color: 'var(--text-secondary)',
             lineHeight: 1.7
           }}>
-            <h2 style={{ fontSize: '1.8rem', color: '#fff', marginBottom: '0.75rem' }}>
+            <h2 style={{ fontSize: '1.8rem', color: 'var(--text-main)', marginBottom: '0.75rem' }}>
               {title || 'Article Title Preview'}
             </h2>
             <div style={{ display: 'flex', gap: '1rem', fontSize: '0.82rem', color: 'var(--accent-cyan)', marginBottom: '1.25rem' }}>
               <span>{category}</span> • <span>{author}</span> • <span>{readTime}</span>
             </div>
             {summary && (
-              <p style={{ fontStyle: 'italic', color: '#94a3b8', borderLeft: '3px solid var(--accent-cyan)', paddingLeft: '1rem', marginBottom: '1.5rem' }}>
+              <p style={{ fontStyle: 'italic', color: 'var(--text-muted)', borderLeft: '3px solid var(--accent-cyan)', paddingLeft: '1rem', marginBottom: '1.5rem' }}>
                 {summary}
               </p>
             )}

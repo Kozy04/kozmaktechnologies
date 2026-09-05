@@ -70,7 +70,7 @@ export const ServicesSection: React.FC = () => {
                 </div>
 
                 {/* Service Title & Tagline */}
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.6rem', color: '#fff' }}>
+                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.6rem', color: 'var(--text-main)' }}>
                   {service.title}
                 </h3>
                 <p style={{ fontSize: '0.95rem', color: 'var(--accent-blue)', marginBottom: '1rem', fontWeight: 500 }}>
@@ -87,7 +87,7 @@ export const ServicesSection: React.FC = () => {
                   </div>
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                     {service.deliverables.map((item, idx) => (
-                      <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.88rem', color: '#e2e8f0' }}>
+                      <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
                         <div style={{
                           width: '16px',
                           height: '16px',
@@ -109,7 +109,7 @@ export const ServicesSection: React.FC = () => {
 
               {/* Supported Platforms Strip */}
               <div style={{
-                borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                borderTop: '1px solid var(--card-border)',
                 paddingTop: '1rem',
                 display: 'flex',
                 alignItems: 'center',
@@ -121,10 +121,10 @@ export const ServicesSection: React.FC = () => {
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                   {service.platforms.map((p, idx) => (
                     <span key={idx} style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
+                      background: 'var(--bg-tertiary)',
                       padding: '0.2rem 0.5rem',
                       borderRadius: '4px',
-                      color: '#cbd5e1',
+                      color: 'var(--text-secondary)',
                       fontFamily: 'var(--font-mono)'
                     }}>
                       {p}

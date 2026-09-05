@@ -74,7 +74,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <div>
               <div className="glass-card" style={{ marginBottom: '1.5rem', borderColor: 'rgba(0, 242, 254, 0.25)' }}>
-                <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem', color: '#fff' }}>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem', color: 'var(--text-main)' }}>
                   Direct Contact & Delivery SLA
                 </h3>
                 <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
@@ -98,7 +98,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Official Inquiries</div>
                       <a 
                         href="mailto:info@kozmaktechnologies.com" 
-                        style={{ fontSize: '0.95rem', fontWeight: 600, color: '#fff', textDecoration: 'underline', textDecorationColor: 'rgba(0, 242, 254, 0.4)' }}
+                        style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-main)', textDecoration: 'underline', textDecorationColor: 'rgba(0, 242, 254, 0.4)' }}
                       >
                         info@kozmaktechnologies.com
                       </a>
@@ -119,7 +119,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
                     </div>
                     <div>
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Response Window</div>
-                      <div style={{ fontSize: '0.95rem', fontWeight: 600, color: '#fff' }}>Under 12 Hours Guaranteed</div>
+                      <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-main)' }}>Under 12 Hours Guaranteed</div>
                     </div>
                   </div>
 
@@ -137,7 +137,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
                     </div>
                     <div>
                       <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Mutual NDA Protection</div>
-                      <div style={{ fontSize: '0.95rem', fontWeight: 600, color: '#fff' }}>100% Confidential IP Guarantee</div>
+                      <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-main)' }}>100% Confidential IP Guarantee</div>
                     </div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
 
               {/* What Happens Next Box */}
               <div className="glass-card">
-                <h4 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Sparkles size={16} color="var(--accent-cyan)" />
                   <span>What Happens Next?</span>
                 </h4>
@@ -161,8 +161,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
           {/* Right Form Column */}
           <div className="glass-card" style={{
             padding: '2.25rem',
-            border: '1px solid rgba(0, 242, 254, 0.3)',
-            background: 'rgba(11, 16, 32, 0.88)'
+            border: '1px solid rgba(0, 242, 254, 0.3)'
           }}>
             {submitted ? (
               <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
@@ -178,21 +177,22 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
                 }}>
                   <CheckCircle2 size={36} color="var(--accent-emerald)" />
                 </div>
-                <h3 style={{ fontSize: '1.6rem', color: '#fff', marginBottom: '0.5rem' }}>
+                <h3 style={{ fontSize: '1.6rem', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
                   Inquiry Dispatched!
                 </h3>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '1.5rem', lineHeight: 1.6 }}>
                   Your submission has been prepared for <strong>info@kozmaktechnologies.com</strong>. Your email client should open automatically, or you can email us directly anytime.
                 </p>
                 <div style={{
-                  background: 'rgba(255, 255, 255, 0.04)',
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--card-border)',
                   padding: '1rem',
                   borderRadius: '0.75rem',
                   marginBottom: '1.5rem',
                   textAlign: 'left',
                   fontSize: '0.85rem',
                   fontFamily: 'var(--font-mono)',
-                  color: '#cbd5e1'
+                  color: 'var(--text-secondary)'
                 }}>
                   <div><strong>To:</strong> info@kozmaktechnologies.com</div>
                   <div><strong>Subject:</strong> Project Inquiry: {name}</div>
@@ -208,7 +208,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledMessage
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <h3 style={{ fontSize: '1.35rem', color: '#fff', marginBottom: '0.25rem' }}>
+                <h3 style={{ fontSize: '1.35rem', color: 'var(--text-main)', marginBottom: '0.25rem' }}>
                   Project Scoping Form
                 </h3>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>

@@ -75,8 +75,8 @@ export const ProcessSection: React.FC = () => {
                     width: '46px',
                     height: '46px',
                     borderRadius: '12px',
-                    background: 'rgba(255, 255, 255, 0.04)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    background: 'var(--bg-tertiary)',
+                    border: '1px solid var(--card-border)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center'
@@ -87,7 +87,8 @@ export const ProcessSection: React.FC = () => {
                     fontFamily: 'var(--font-mono)',
                     fontSize: '1.5rem',
                     fontWeight: 800,
-                    color: 'rgba(255, 255, 255, 0.15)'
+                    color: 'var(--text-muted)',
+                    opacity: 0.5
                   }}>
                     {s.step}
                   </span>
@@ -102,7 +103,7 @@ export const ProcessSection: React.FC = () => {
                   {s.timeline}
                 </div>
 
-                <h3 style={{ fontSize: '1.2rem', marginBottom: '0.75rem', color: '#fff' }}>
+                <h3 style={{ fontSize: '1.2rem', marginBottom: '0.75rem', color: 'var(--text-main)' }}>
                   {s.title}
                 </h3>
 
@@ -114,7 +115,7 @@ export const ProcessSection: React.FC = () => {
               <div style={{
                 marginTop: '1.5rem',
                 paddingTop: '0.75rem',
-                borderTop: '1px solid rgba(255, 255, 255, 0.06)',
+                borderTop: '1px solid var(--card-border)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.4rem',

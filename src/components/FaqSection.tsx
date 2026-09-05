@@ -37,7 +37,7 @@ export const FaqSection: React.FC = () => {
                 className="glass-card"
                 style={{
                   padding: '1.25rem 1.75rem',
-                  border: isOpen ? '1px solid var(--accent-cyan)' : '1px solid rgba(255, 255, 255, 0.08)',
+                  border: isOpen ? '1px solid var(--accent-cyan)' : '1px solid var(--card-border)',
                   cursor: 'pointer',
                   transition: 'all 0.25s ease'
                 }}
@@ -55,7 +55,7 @@ export const FaqSection: React.FC = () => {
                     }}>
                       {item.category}
                     </span>
-                    <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: '#fff' }}>
+                    <h3 style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-main)' }}>
                       {item.question}
                     </h3>
                   </div>
@@ -74,8 +74,8 @@ export const FaqSection: React.FC = () => {
                   <div style={{
                     marginTop: '1rem',
                     paddingTop: '1rem',
-                    borderTop: '1px solid rgba(255, 255, 255, 0.06)',
-                    color: '#cbd5e1',
+                    borderTop: '1px solid var(--card-border)',
+                    color: 'var(--text-secondary)',
                     fontSize: '0.95rem',
                     lineHeight: 1.7
                   }}>

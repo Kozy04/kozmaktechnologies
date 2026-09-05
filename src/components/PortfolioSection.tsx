@@ -55,12 +55,12 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                 onClick={() => setSelectedCategory(cat.key)}
                 style={{
                   background: selectedCategory === cat.key 
-                    ? 'linear-gradient(135deg, rgba(0, 242, 254, 0.25) 0%, rgba(121, 40, 202, 0.25) 100%)' 
-                    : 'rgba(255, 255, 255, 0.04)',
-                  color: selectedCategory === cat.key ? '#fff' : 'var(--text-secondary)',
+                    ? 'rgba(0, 242, 254, 0.18)' 
+                    : 'var(--card-bg)',
+                  color: selectedCategory === cat.key ? 'var(--accent-cyan)' : 'var(--text-secondary)',
                   border: selectedCategory === cat.key 
                     ? '1px solid var(--accent-cyan)' 
-                    : '1px solid rgba(255, 255, 255, 0.08)',
+                    : '1px solid var(--card-border)',
                   padding: '0.5rem 1.1rem',
                   borderRadius: '9999px',
                   fontSize: '0.85rem',
@@ -101,8 +101,8 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                 width: '100%',
                 height: '240px',
                 overflow: 'hidden',
-                backgroundColor: '#0a0d18',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+                backgroundColor: 'var(--bg-tertiary)',
+                borderBottom: '1px solid var(--card-border)'
               }}>
                 <img 
                   src={project.image} 
@@ -139,10 +139,10 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                     {project.badge}
                   </span>
                   <span style={{
-                    background: 'rgba(6, 8, 15, 0.85)',
+                    background: 'var(--nav-bg)',
                     backdropFilter: 'blur(8px)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    color: '#fff',
+                    border: '1px solid var(--card-border)',
+                    color: 'var(--text-main)',
                     padding: '0.25rem 0.65rem',
                     borderRadius: '9999px',
                     fontSize: '0.75rem',
@@ -161,8 +161,8 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                     width: '32px',
                     height: '32px',
                     borderRadius: '50%',
-                    background: 'rgba(6, 8, 15, 0.85)',
-                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    background: 'var(--nav-bg)',
+                    border: '1px solid var(--card-border)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -177,7 +177,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
               <div style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'space-between' }}>
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.6rem' }}>
-                    <h3 style={{ fontSize: '1.45rem', color: '#fff' }}>{project.title}</h3>
+                    <h3 style={{ fontSize: '1.45rem', color: 'var(--text-main)' }}>{project.title}</h3>
                   </div>
 
                   <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.25rem' }}>
@@ -191,8 +191,8 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                     gap: '0.5rem',
                     padding: '0.85rem',
                     borderRadius: '0.65rem',
-                    background: 'rgba(255, 255, 255, 0.03)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                    background: 'var(--bg-tertiary)',
+                    border: '1px solid var(--card-border)',
                     marginBottom: '1.25rem',
                     textAlign: 'center'
                   }}>
@@ -216,11 +216,11 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                         style={{
                           fontSize: '0.74rem',
                           fontFamily: 'var(--font-mono)',
-                          background: 'rgba(255, 255, 255, 0.05)',
-                          color: '#cbd5e1',
+                          background: 'var(--bg-tertiary)',
+                          color: 'var(--text-secondary)',
                           padding: '0.2rem 0.55rem',
                           borderRadius: '4px',
-                          border: '1px solid rgba(255, 255, 255, 0.08)'
+                          border: '1px solid var(--card-border)'
                         }}
                       >
                         {tech}
@@ -232,7 +232,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                 {/* Footer Link */}
                 <div style={{
                   paddingTop: '1rem',
-                  borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderTop: '1px solid var(--card-border)',
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center'
@@ -250,7 +250,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                       onClick={(e) => e.stopPropagation()}
                       style={{
                         fontSize: '0.8rem',
-                        color: '#cbd5e1',
+                        color: 'var(--accent-cyan)',
                         display: 'flex',
                         alignItems: 'center',
                         gap: '0.35rem',
@@ -309,9 +309,9 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                   position: 'absolute',
                   top: '1.25rem',
                   right: '1.25rem',
-                  background: 'rgba(255, 255, 255, 0.08)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  color: '#fff',
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--card-border)',
+                  color: 'var(--text-main)',
                   width: '36px',
                   height: '36px',
                   borderRadius: '50%',
@@ -346,11 +346,11 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                   <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>{activeModalProject.categoryLabel}</span>
                 </div>
 
-                <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#fff' }}>
+                <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--text-main)' }}>
                   {activeModalProject.title}
                 </h3>
 
-                <p style={{ fontSize: '1.05rem', color: '#cbd5e1', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '1.5rem' }}>
                   {activeModalProject.detailedCase}
                 </p>
 
@@ -359,8 +359,8 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                   display: 'grid',
                   gridTemplateColumns: 'repeat(3, 1fr)',
                   gap: '1rem',
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  background: 'var(--bg-tertiary)',
+                  border: '1px solid var(--card-border)',
                   borderRadius: '0.75rem',
                   padding: '1rem',
                   marginBottom: '1.5rem',
@@ -389,7 +389,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                         key={idx}
                         style={{
                           background: 'rgba(0, 242, 254, 0.08)',
-                          color: '#fff',
+                          color: 'var(--text-main)',
                           border: '1px solid rgba(0, 242, 254, 0.25)',
                           padding: '0.35rem 0.85rem',
                           borderRadius: '6px',
